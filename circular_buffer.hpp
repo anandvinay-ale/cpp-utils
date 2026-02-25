@@ -65,6 +65,9 @@ public:
     }
 
 private:
+    // Note: buf_ is fully value-initialized for all Capacity elements when the circular_buffer
+    // is constructed. For non-trivial T and large Capacity, this may have performance and
+    // memory implications, as all elements are constructed eagerly even when the buffer is empty.
     std::array<T, Capacity> buf_{};
     size_type head_{0};
     size_type size_{0};
