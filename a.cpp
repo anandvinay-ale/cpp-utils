@@ -2,6 +2,6 @@
 
 int main()
 {
-	std::cout << "Hello World From Laptop\n";
 	std::cout << "Hello World From Linux server\n";
+	std::cout << "Hello from New Laptop \n";
 }
